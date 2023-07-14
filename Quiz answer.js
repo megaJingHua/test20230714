@@ -144,7 +144,6 @@ function getInterval(array) {
             // overlap
             var overlapFirst, overlapLast;
             if (origin[i - 1] === 1 && origin[i + 1] === 1) {
-                console.log(i)
                 overlap.push([i])
             } else if (origin[i - 1] === 1) {
                 overlapFirst = i
@@ -152,10 +151,8 @@ function getInterval(array) {
                 overlapLast = i
                 overlap.push([overlapFirst, overlapLast])
             }
-            console.log('end')
         }
     }
-    console.log(origin)
     return {
         overlap,
         notInclude,
